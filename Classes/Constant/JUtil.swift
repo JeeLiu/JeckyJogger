@@ -53,5 +53,25 @@ class JUtil: NSObject {
         let newBlue  = CGFloat(Double(b) / 255.0)
         return UIColor(red: newRed, green: newGreen, blue: newBlue, alpha: CGFloat(1.0))
     }
+    
+    class func computeCalorie(paceSpeed:CGFloat, second:NSInteger) -> CGFloat {
+        if paceSpeed == 0.0 {
+            return 0.0
+        }
+        
+        var K = 400/(paceSpeed*60)
+        K = 30/K
+        var hour = CGFloat(second)/3600.0 as CGFloat
+        var weight = 60.0 as CGFloat
+        
+        var result = K * weight * hour
+        
+        if isnan(result) || isinf(result){
+            return 0.0
+        }
+        
+        return result
+        
+    }
 
 }

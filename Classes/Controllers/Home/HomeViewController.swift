@@ -155,7 +155,8 @@ class HomeViewController: BaseViewController, MAMapViewDelegate,UIAlertViewDeleg
         
         runRecord!.mileage = (runDistance!/1000.0)
         runRecord!.totalTime = runSeconds
-        
+        runRecord?.calorie = JUtil.computeCalorie((runDistance!/CGFloat(runSeconds!)), second: runSeconds!)
+
         var location:CLLocation = runRecord!.points.lastObject as CLLocation
         runRecord!.endPoint = location.coordinate
         
