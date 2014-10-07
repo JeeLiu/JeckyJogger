@@ -10,3 +10,8 @@ Swift从6月份发布到现在，由于种种原因一直没有去学习，甚�
 @老彭 
 新浪微博：http://www.weibo.com/rubbishpicker
 CSDN:http://blog.csdn.net/pjk1129
+
+参考文献：
+1）RESideMenu  https://github.com/romaonthego/RESideMenu
+2）高德地图  http://lbs.amap.com/api/ios-sdk/down/
+
